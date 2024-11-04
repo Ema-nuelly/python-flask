@@ -6,7 +6,7 @@ def index():
 
 @app.route("/contact")
 def contato():
-    return render_template("contact.html")
+    return render_template("contact.html", phone = "(87) 94002-8922")
 
 if __name__ == '__main__':
     app.run()
