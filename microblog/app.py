@@ -17,13 +17,13 @@ def products():
     return render_template("products.html", disclaimer = "Please note that at this time, our shoes are available for in-store purchase only. We do not offer delivery services. We appreciate your understanding and encourage you to visit us to try on and purchase your favorite pairs!")
 
 @app.route("/soma/<int:num1>/<int:num2>")
+@app.route("/calculadora/")
 def continha (num1, num2):
     soma = num1 + num2
     subtracao = num1 - num2
     divisao = num1 / num2
     multiplicacao = num1 * num2
     return f"Soma: {soma}, Subtração: {subtracao}, Divisão: {divisao}, Multiplicação: {multiplicacao}"
-
 
 if __name__ == '__main__':
     app.run()
