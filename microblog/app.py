@@ -27,3 +27,5 @@ def continha (num1, num2):
 
 if __name__ == '__main__':
     app.run()
+
+@app.route("/minhapagina")
