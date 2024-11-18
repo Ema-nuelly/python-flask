@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask (__name__)
 app.run(debug=True)
 @app.route('/')
@@ -31,7 +31,23 @@ def continha(num1, num2):
         multiplicacao=multiplicacao
     )
 
+@app.route("/dados")
+def dados():
+    return render_template("dados.html")
 
+@app.route("/recebedados", methods=['POST'])
+def recebedados():
+    nome = request.form.get('nome')
+    return nome
+
+@app.route('/recebedados1', methods=['POST'])
+def recebedados1():
+	estado = request.form['estado'] 
+                    
+@app.route('/recebedados2', methods=['POST'])
+def recebedados2():
+	formacao = request.form['formacao']
+                          
 if __name__ == '__main__':
     app.run()
 
