@@ -25,7 +25,9 @@ def continha (num1, num2):
     multiplicacao = num1 * num2
     return f"Soma: {soma}, Subtração: {subtracao}, Divisão: {divisao}, Multiplicação: {multiplicacao}"
 
+@app.route('/formulario')
+def dados():
+    return render_template('formulario.html')
+
 if __name__ == '__main__':
     app.run()
-
-@app.route("/minhapagina")
