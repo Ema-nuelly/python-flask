@@ -4,8 +4,9 @@ body{
     font-family: "Gamja Flower", sans-serif;
     font-size: 30px;
     font-style: normal;
-    background-color: rgb(162, 196, 197);
     background-image: url("C:\Users\202214040008\Documents\GitHub\python-flask\microblog\static\img\giphy.webp");
+    background-color: darkslategray;
+    color: azure;
   }
 footer{text-align: center; background-color: cadetblue;}
 
