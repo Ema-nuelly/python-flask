@@ -53,3 +53,32 @@ def recebedados2():
 if __name__ == '__main__':
     app.run()
 
+@app.route('/check/<int:age>')
+def check(age):
+     return "You are " + str(age) + " years old"
+
+@app.route('/check1/<int:adult>')
+def check1(adult):
+     if adult >= 18:
+          return "You're officially an adult"
+     if adult < 18:
+          return "Get out, child"
+
+@app.route('/check2/<float:bulletin>')
+def check2(bulletin):
+     if bulletin >=7:
+          return "passou miseravi"
+     elif bulletin <7 and bulletin >=3:
+          return "oooo recuperaçãum"
+     else:
+          return "fora."
+
+@app.route('/logar')
+def logar():
+    user = request.form["admin"]
+    passw = request.form["345"]
+
+    if user == "admin" and passw == "345":
+         return "your account info"
+    else:
+         return "wrong, bye"
