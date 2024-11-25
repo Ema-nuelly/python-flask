@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask (__name__)
 @app.route('/')
 def index():
@@ -25,9 +25,15 @@ def continha (num1, num2):
     multiplicacao = num1 * num2
     return f"Soma: {soma}, Subtração: {subtracao}, Divisão: {divisao}, Multiplicação: {multiplicacao}"
 
-@app.route('/formulario')
-def dados():
-    return render_template('formulario.html')
+@app.route('/formulario', methods = ["GET", "POST"])
+def formulario():
+    if request.method == "GET":
+        return render_template("dados.html")
+    elif request.method == "POST":
+        nome = request.form["nome"]
+        email = request.form["email"]
+        msg = request.form["mensagem"]
+        return f{"Nome: {nome}, Email: {email}, Mensagem: {msg}"}
 
 if __name__ == '__main__':
     app.run()
