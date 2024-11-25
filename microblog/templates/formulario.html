@@ -10,6 +10,16 @@
         <label>Nome: </label>
         <input type="text" name="nome"><br/>
         <button type="submit">Enviar</button>
+    <title>formulario</title>
+</head>
+<body>
+    <form action="{{url_for('logar')}}" method="post">
+        <label>Log-in:</label>
+        <input type="text" name="user">
+        <label>Password:</label>
+        <input type="password" name="passw">
+
+        <button type="submit">Enter</button>
     </form>
 </body>
 </html>

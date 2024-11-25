@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+</head>
+<body>
+    <form action="{{url_for('recebedados')}}" method="post">
+        <label>Nome: </label>
+        <input type="text" name="nome"><br />
+        <button type="submit">Enviar</button>
+
+    </form>
+    
+    <form action="{{url_for('recebedados1')}}" method="post">
+        <select name="estado">
+            <option value="RN"> Rio Grande do Norte </option>
+            <option value="PB"> Paraíba </option>
+            <option value="PE"> Pernambuco</option>
+            <option value="CE"> Ceará </option>
+        </select>
+          
+    </form action="{{url_for('recebedados2')}}" method="post">
+    <form>
+        <input type="radio" name="formacao" value="fundamental">Ensino Fundamental<br>
+        <input type="radio" name="formacao" value="medio">Ensino Médio<br>
+        <input type="radio" name="formacao" value="superior">Ensino Superior<br>
+    </form>
+</body>
+</html>
